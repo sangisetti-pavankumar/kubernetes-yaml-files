@@ -17,9 +17,11 @@ spec:
         image: nginx
         resources:
           requests:
-            cpu: "200m"
+            cpu: "100m"       # Requests 100 milliCPU (0.1 CPU)
+            memory: "128Mi"   # Requests 128 MiB RAM
           limits:
-            cpu: "500m"
+            cpu: "500m"       # Max CPU usage 0.5 CPU
+            memory: "512Mi"   # Max RAM 512 MiB
 ---
 apiVersion: v1
 kind: Service
